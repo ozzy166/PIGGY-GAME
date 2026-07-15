@@ -12,14 +12,20 @@ const won0 = document.querySelector('#won-0')
 const lose1 = document.querySelector('#lose-1')
 const won1 = document.querySelector('#won-1')
 const lose0 = document.querySelector('#lose-0')
+const cancel = document.querySelector('#cancel')
+const overlay = document.querySelector('#overlay')
+const mark = document.querySelector('#mark')
+const question = document.querySelector('#question')
 
 let activeplayer =0
 
  let scores =0
  let add = [0,0]
  let playing = true
+
 rolldice.addEventListener('click', ()=>{
     if(playing){
+        hold.classList.remove('hidden')
     dice.classList.remove('hidden')
   const dicerandom = Math.trunc(Math.random() * 6) +1  
     dice.src = `dice-${dicerandom}.png`
@@ -49,8 +55,10 @@ hold.addEventListener('click',()=>{
 document.querySelector(`#total-${activeplayer}`).textContent = add[activeplayer]
 scores= 0
         document.querySelector(`#score-${activeplayer}`).textContent=scores
+     
 
-if(add[activeplayer] >= 10){
+
+if(add[activeplayer] >= 100){
 
         
         dice.classList.add('hidden')
@@ -65,14 +73,19 @@ if(add[activeplayer] >= 10){
  document.querySelector(`#lose-${losingplayer}`).classList.remove('hidden')
 
     playing = false
- } 
-  activeplayer = activeplayer === 0 ? 1:0   
+ }
+      activeplayer = activeplayer === 0 ? 1:0   
         console.log(activeplayer)
  colour0.classList.toggle('bg-blue-950')
  colour0.classList.toggle('bg-blue-700')
  colour1.classList.toggle('bg-blue-950')
  colour1.classList.toggle('bg-blue-700')
-    }
+    
+   
+ hold.classList.add('hidden')
+ }
+
+
 })
 
 
@@ -102,4 +115,19 @@ dice.classList.add('hidden')
 // activeplayer = activeplayer === 0 ? 1:0 
     // document.querySelector(`#colour-${activeplayer}`).classList.add('bg-blue-700')
 
+})
+
+function all(){
+      overlay.classList.add('hidden')
+question.classList.add('hidden') 
+}
+all()
+mark.addEventListener('click', ()=>{
+overlay.classList.remove('hidden')
+question.classList.remove('hidden')
+})
+cancel.addEventListener('click', all)
+overlay.addEventListener('click', all)
+document.addEventListener('keydown',(e)=>{
+    if(e.key=== 'Escape' ) all()
 })
