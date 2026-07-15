@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piggy Game</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class=" bg-linear-to-tr from-blue-700 from-0% to-purple-950 to-100%  text-center pt-10 bg-repeat-y max-[800px]:pt-3">
+    <div class="space-y-10 max-[800px]:space-y-5">
+       <div>
+        <p class="text-7xl font-bold text-center max-[800px]:text-3xl">Welcome to the Piggy Game!</p>
+       </div>
+        
+
+<div class="flex justify-center items-center z-30 rounded-2xl shadow-[3px_3px_15px_10px] m-auto w-[60%] relative max-[800px]:w-[90%] max-[800px]:">
+          <!-- first -->
+      <div class="bg-blue-950 h-150  w-full space-y-14 pt-20 rounded-l-2xl max-[800px]:space-y-5 max-[800px]:h-90 max-[800px]:pt-5" id="colour-0">
+
+<div class="space-y-5 ">
+    
+    <p class="text-black font-bold text-7xl max-[800px]:text-3xl ">Player 1</p>
+        <p class="text-black/50 text-7xl font-bold max-[800px]:text-3xl" id="total-0">0</p>
+</div>
+<div class="space-y-3">
+    <p class="font-bold hidden text-4xl max-[800px]:text-2xl " id="won-0">You won the game🎉🎉</p>
+    <p class="font-bold hidden text-4xl max-[800px]:text-2xl " id="lose-0">You lost the game☹️☹️</p>
+</div>
+        
+        <div class="bg-black/50 text-white  h-30 pt-5.5 w-[40%] m-auto rounded-lg">
+            <p class="font-bold text-3xl ">Current</p>
+            <p class="text-4xl font-bold" id="score-0">0</p>
+        </div>
+      </div> 
+       <!--second  -->
+      <div class="bg-blue-700 h-150 w-full space-y-14 pt-20 rounded-r-2xl max-[800px]:space-y-5 max-[800px]:h-90 max-[800px]:pt-5 "id="colour-1" >
+        <div class="space-y-5 ">
+            <p class="text-black font-bold text-7xl max-[800px]:text-3xl" >Player 2</p>
+            <p class="text-black/50 text-7xl font-bold max-[800px]:text-3xl" id="total-1">0</p>
+        </div>
+<div class="space-y-3">
+    <p class="font-bold hidden text-4xl max-[800px]:text-2xl " id="won-1">You won the game🎉🎉</p>
+    <p class="font-bold hidden text-4xl max-[800px]:text-2xl " id="lose-1">You lost the game☹️☹️</p>
+</div>
+
+        <div class="bg-black/50 text-white h-30 pt-5.5 w-[40%] m-auto rounded-lg">
+            <p class="font-bold text-3xl ">Current</p>
+            <p class="text-4xl font-bold" id="score-1">0</p>
+        </div>
+      </div>  
+</div>
+  <img src="dice-5.png" class="w-[6%] hidden absolute top-[48%] z-50 left-[47%] invert max-[800px]:top-[48%] " alt="Playing dice" id="dice" />
+      <button class="bg-black/78 text-2xl text-white/70 p-3 rounded-l-full rounded-r-full font-bold px-7 absolute  active:translate-x-0 active:translate-y-[2px]   active:shadow-[3px_3px_15px_5px] shadow-blue-950  tr top-43 z-50 left-[43%] max-[800px]:top-[22%] max-[800px]:left-[36%]" id="new-game">🔄 New game</button>
+      <button class="bg-black/78 text-2xl text-white/70 p-3 rounded-l-full rounded-r-full font-bold px-7 absolute  active:translate-x-0 active:translate-y-[2px]   active:shadow-[3px_3px_15px_5px] shadow-blue-950 top-[75%] z-50 left-[43.5%] max-[800px]:top-[70%] max-[800px]:left-[38%]" id="roll-dice">🎲 Roll dice</button>
+      <button class="bg-black/78 text-2xl text-white/70 p-3 rounded-l-full rounded-r-full font-bold px-7 absolute  active:translate-x-0 active:translate-y-[2px]   active:shadow-[3px_3px_15px_5px] shadow-blue-950 top-[85%] z-50 left-[45%] max-[800px]:top-[85%] max-[800px]:left-[40%]" id="hold">📥 Hold</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
