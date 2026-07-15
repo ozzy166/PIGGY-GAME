@@ -50,7 +50,7 @@ document.querySelector(`#total-${activeplayer}`).textContent = add[activeplayer]
 scores= 0
         document.querySelector(`#score-${activeplayer}`).textContent=scores
 
-if(add[activeplayer] >= 100){
+if(add[activeplayer] >= 10){
 
         
         dice.classList.add('hidden')
