@@ -33,6 +33,7 @@ rolldice.addEventListener('click', ()=>{
             document.querySelector(`#score-${activeplayer}`).textContent=scores
 
     if(dicerandom ===1){
+      hold.classList.add('hidden')  
         scores =0
         document.querySelector(`#score-${activeplayer}`).textContent=scores
      activeplayer = activeplayer === 0 ? 1:0   
@@ -41,6 +42,7 @@ rolldice.addEventListener('click', ()=>{
  colour0.classList.toggle('bg-blue-700')
  colour1.classList.toggle('bg-blue-950')
  colour1.classList.toggle('bg-blue-700')
+
 
     }
 
