@@ -112,6 +112,7 @@ colour1.classList.add('bg-blue-700')
 colour0.classList.remove('bg-blue-700')
 colour1.classList.remove('bg-blue-950')
 dice.classList.add('hidden')
+hold.classList.add('hidden')
 // activeplayer = activeplayer === 0 ? 1:0 
     // document.querySelector(`#colour-${activeplayer}`).classList.add('bg-blue-700')
 
